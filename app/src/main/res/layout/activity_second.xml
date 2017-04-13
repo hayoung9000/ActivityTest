@@ -7,10 +7,10 @@
     tools:context="com.example.lg.activitytest.MainActivity">
 
     <Button
-        android:id="@+id/but_main"
+        android:id="@+id/but_second"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="새로운 액티비티 열기"
+        android:text="메인 액티비티 돌아가기"
         />
 
 
