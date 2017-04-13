@@ -1,7 +1,10 @@
 package com.example.lg.activitytest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,5 +12,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button butMain=(Button)findViewById(R.id.but_main); //형변환을 안하면 view로 사용하는거
+        butMain.setOnClickListener(butMainHandler);
     }
+    View.OnClickListener butMainHandler=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this,SecondActivity.class); //그냥 this를 하면 익명 클래스의 this가 된다
+            startActivity(intent);
+        }
+    }; //익명 클래스 객체는 ; 가 있어야 함
 }
